@@ -1,7 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone } from "lucide-react";
+import { Phone, PhoneIcon } from "lucide-react";
+import Link from "next/link";
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.3,
+    },
+  },
+};
 
 export function SafetyConvenience() {
   return (
@@ -56,36 +76,37 @@ export function SafetyConvenience() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-start gap-5">
-              {/* Book Online Button */}
-              <motion.button
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 0 30px rgba(203, 178, 106, 0.4)",
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="px-10 py-4 rounded-md font-semibold text-lg transition-all duration-300 shadow-lg"
-                style={{ backgroundColor: "#CBB26A", color: "#110D09" }}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              // variants={containerVariants}
+              viewport={{ once: true }}
+              className="relative z-10"
+            >
+              {/* CTA Buttons */}
+              <motion.div
+                variants={itemVariants}
+                className="flex flex-col sm:flex-row items-center sm:justify-start gap-5"
               >
-                BOOK ONLINE
-              </motion.button>
+                <Link
+                  href={"/"}
+                  className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold uppercase tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-primary/50"
+                >
+                  BOOK ONLINE
+                </Link>
 
-              {/* Phone Button */}
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="tel:+17038681811"
-                className="px-10 py-4 rounded-md font-semibold text-lg transition-all duration-300 flex items-center gap-2"
-                style={{
-                  border: "2px solid #CBB26A",
-                  color: "#CBB26A",
-                  backgroundColor: "transparent",
-                }}
-              >
-                <Phone size={22} />
-                +1 (703) 868-1811
-              </motion.a>
-            </div>
+                {/* Secondary CTA */}
+
+                <Link
+                  href={"tel:+17038681811"}
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary rounded-xl font-semibold uppercase tracking-wide hover:bg-primary/10 transition-all duration-300"
+                >
+                  <PhoneIcon className="w-5 h-5 mr-2" />
+                  +1 (703) 868-1811
+                </Link>
+              </motion.div>
+            </motion.div>
           </motion.div>
 
           {/* Right: Two Stacked Images */}

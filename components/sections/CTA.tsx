@@ -1,6 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { PhoneIcon } from "lucide-react";
+import Link from "next/link";
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.3,
+    },
+  },
+};
 
 export function CTA() {
   return (
@@ -19,6 +41,7 @@ export function CTA() {
           style={{ backgroundColor: "rgba(203, 178, 106, 0.1)" }}
         ></div>
       </div>
+
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,93 +51,50 @@ export function CTA() {
         >
           {/* Main CTA */}
           <h2
-            className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 pb-6  inline-block"
+            className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 pb-6 inline-block"
             style={{ color: "#F5F5F3" }}
           >
             Free Consultation?
           </h2>
+
           <p
             className="text-lg mb-12 leading-relaxed max-w-2xl mx-auto"
             style={{ color: "#D6D6D6" }}
           >
             Book Your Luxury Car Service Now.
           </p>
+
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="relative z-10"
           >
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 30px rgba(203, 178, 106, 0.4)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg"
-              style={{ backgroundColor: "#CBB26A", color: "#110D09" }}
+            {/* CTA Buttons */}
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col sm:flex-row items-center sm:justify-center gap-5"
             >
-              BOOK ONLINE
-            </motion.button>
+              <Link
+                href={"/"}
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold uppercase tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-primary/50"
+              >
+                BOOK ONLINE
+              </Link>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 border-2"
-              style={{
-                borderColor: "#CBB26A",
-                color: "#CBB26A",
-                backgroundColor: "transparent",
-              }}
-            >
-              +1 (703) 868-1811
-            </motion.button>
+              {/* Secondary CTA */}
+
+              <Link
+                href={"tel:+17038681811"}
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary rounded-xl font-semibold uppercase tracking-wide hover:bg-primary/10 transition-all duration-300"
+              >
+                <PhoneIcon className="w-5 h-5 mr-2" />
+                +1 (703) 868-1811
+              </Link>
+            </motion.div>
           </motion.div>
-          {/* Trust Indicators
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="mt-16 pt-12 border-t flex flex-col sm:flex-row gap-8 justify-around items-center"
-            style={{ borderColor: "rgba(203, 178, 106, 0.3)" }}
-          >
-            <div className="text-center">
-              <p
-                className="text-3xl font-serif font-bold"
-                style={{ color: "#CBB26A" }}
-              >
-                157 k
-              </p>
-              <p className="text-sm mt-2" style={{ color: "#D6D6D6" }}>
-                Satisfied clients
-              </p>
-            </div>
-            <div className="text-center">
-              <p
-                className="text-3xl font-serif font-bold"
-                style={{ color: "#CBB26A" }}
-              >
-                10 +
-              </p>
-              <p className="text-sm mt-2" style={{ color: "#D6D6D6" }}>
-                Years of experience
-              </p>
-            </div>
-            <div className="text-center">
-              <p
-                className="text-3xl font-serif font-bold"
-                style={{ color: "#CBB26A" }}
-              >
-                98%
-              </p>
-              <p className="text-sm mt-2" style={{ color: "#D6D6D6" }}>
-                Satisfaction Rate
-              </p>
-            </div>
-          </motion.div> */}
         </motion.div>
       </div>
     </section>
