@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Clock, CheckCircle, Sparkles } from "lucide-react";
+import { Clock, CheckCircle, Sparkles, PhoneIcon } from "lucide-react";
 
 const experiences = [
   {
@@ -107,6 +107,7 @@ export function Experience() {
                         className="text-xl font-bold font-serif"
                         style={{ color: "#CBB26A" }}
                       >
+                        <PhoneIcon className="inline mr-2" size={16} />
                         {item.phone}
                       </p>
                     </div>
