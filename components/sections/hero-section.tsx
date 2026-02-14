@@ -1,21 +1,21 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import Image from 'next/image'
-import { ChevronDown } from 'lucide-react'
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import { ChevronDown, PhoneIcon } from "lucide-react";
 
 interface HeroSectionProps {
-  headline: string
-  subheadline: string
+  headline: string;
+  subheadline: string;
   primaryCta: {
-    text: string
-    link: string
-  }
+    text: string;
+    link: string;
+  };
   secondaryCta: {
-    text: string
-    link: string
-  }
+    text: string;
+    link: string;
+  };
 }
 
 export function HeroSection({
@@ -33,16 +33,16 @@ export function HeroSection({
         delayChildren: 0.3,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' },
+      transition: { duration: 0.6, ease: "easeOut" },
     },
-  }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -59,10 +59,14 @@ export function HeroSection({
         <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-secondary/30" />
 
         {/* Grid pattern for luxury feel */}
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: 'linear-gradient(0deg, transparent 24%, rgba(200, 160, 80, .1) 25%, rgba(200, 160, 80, .1) 26%, transparent 27%, transparent 74%, rgba(200, 160, 80, .1) 75%, rgba(200, 160, 80, .1) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(200, 160, 80, .1) 25%, rgba(200, 160, 80, .1) 26%, transparent 27%, transparent 74%, rgba(200, 160, 80, .1) 75%, rgba(200, 160, 80, .1) 76%, transparent 77%, transparent)',
-          backgroundSize: '50px 50px'
-        }} />
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "linear-gradient(0deg, transparent 24%, rgba(200, 160, 80, .1) 25%, rgba(200, 160, 80, .1) 26%, transparent 27%, transparent 74%, rgba(200, 160, 80, .1) 75%, rgba(200, 160, 80, .1) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(200, 160, 80, .1) 25%, rgba(200, 160, 80, .1) 26%, transparent 27%, transparent 74%, rgba(200, 160, 80, .1) 75%, rgba(200, 160, 80, .1) 76%, transparent 77%, transparent)",
+            backgroundSize: "50px 50px",
+          }}
+        />
       </div>
 
       {/* Content */}
@@ -87,7 +91,10 @@ export function HeroSection({
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-col sm:flex-row gap-4 justify-center pt-6"
+          >
             {/* Primary CTA */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
@@ -104,6 +111,7 @@ export function HeroSection({
                 href={secondaryCta.link}
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary rounded-xl font-semibold uppercase tracking-wide hover:bg-primary/10 transition-all duration-300"
               >
+                <PhoneIcon className="w-5 h-5 mr-2" />
                 {secondaryCta.text}
               </Link>
             </motion.div>
@@ -120,5 +128,5 @@ export function HeroSection({
         <ChevronDown className="w-6 h-6 text-primary" />
       </motion.div>
     </section>
-  )
+  );
 }

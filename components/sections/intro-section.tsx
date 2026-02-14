@@ -1,17 +1,27 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import Image from 'next/image'
-import { AnimatedSection } from '../animated-section'
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import { AnimatedSection } from "../animated-section";
+import { PhoneIcon } from "lucide-react";
 
 interface IntroSectionProps {
-  text: string
+  text: string;
   cta: {
-    text: string
-    link: string
-  }
+    text: string;
+    link: string;
+  };
 }
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 export function IntroSection({ text, cta }: IntroSectionProps) {
   return (
@@ -21,12 +31,11 @@ export function IntroSection({ text, cta }: IntroSectionProps) {
         <AnimatedSection direction="right">
           <div className="space-y-6">
             <h2 className="premium-subheading text-foreground">
-              Excellence in Every Journey
+              Only The Finest Luxury Transport
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               {text}
             </p>
-
             {/* Divider */}
             <motion.div
               className="w-16 h-1 bg-gradient-to-r from-primary to-primary/0"
@@ -38,18 +47,35 @@ export function IntroSection({ text, cta }: IntroSectionProps) {
 
             {/* CTA */}
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              variants={itemVariants}
+              className="flex flex-col sm:flex-row gap-4 justify-center pt-6"
             >
-              <Link
-                href={cta.link}
-                className="inline-flex items-center gap-3 text-primary font-semibold uppercase tracking-wide hover:gap-4 transition-all duration-300 group"
+              {/* Primary CTA */}
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                {cta.text}
-                <span className="transform group-hover:translate-x-2 transition-transform duration-300">
-                  →
-                </span>
-              </Link>
+                <Link
+                  href={"/"}
+                  className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold uppercase tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-primary/50"
+                >
+                  BOOK ONLINE
+                </Link>
+              </motion.div>
+
+              {/* Secondary CTA */}
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  href={"tel:+17038681811"}
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary rounded-xl font-semibold uppercase tracking-wide hover:bg-primary/10 transition-all duration-300"
+                >
+                  <PhoneIcon className="w-5 h-5 mr-2" />
+                  +1 (703) 868-1811
+                </Link>
+              </motion.div>
             </motion.div>
           </div>
         </AnimatedSection>
@@ -99,5 +125,5 @@ export function IntroSection({ text, cta }: IntroSectionProps) {
         </AnimatedSection>
       </div>
     </section>
-  )
+  );
 }

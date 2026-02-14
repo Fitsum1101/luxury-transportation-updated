@@ -1,16 +1,16 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Phone, Mail, MapPin } from 'lucide-react'
-import { AnimatedSection } from '../animated-section'
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { AnimatedSection } from "../animated-section";
 
 interface ContactSectionProps {
-  title: string
-  phone: string
-  email: string
-  address: string
+  title: string;
+  phone: string;
+  email: string;
+  address: string;
 }
 
 export function ContactSection({
@@ -22,23 +22,23 @@ export function ContactSection({
   const contactItems = [
     {
       icon: Phone,
-      label: 'Phone',
+      label: "Phone",
       value: phone,
       link: `tel:${phone}`,
     },
     {
       icon: Mail,
-      label: 'Email',
+      label: "Email",
       value: email,
       link: `mailto:${email}`,
     },
     {
       icon: MapPin,
-      label: 'Address',
+      label: "Address",
       value: address,
-      link: '#',
+      link: "#",
     },
-  ]
+  ];
 
   return (
     <section className="py-24 md:py-32 px-6 md:px-12 relative overflow-hidden">
@@ -70,7 +70,7 @@ export function ContactSection({
           {/* Contact Cards */}
           <div className="space-y-6">
             {contactItems.map((item, idx) => {
-              const Icon = item.icon
+              const Icon = item.icon;
               return (
                 <AnimatedSection key={idx} delay={idx * 0.1}>
                   <motion.a
@@ -94,7 +94,7 @@ export function ContactSection({
                     </div>
                   </motion.a>
                 </AnimatedSection>
-              )
+              );
             })}
           </div>
 
@@ -121,35 +121,16 @@ export function ContactSection({
                     <MapPin className="w-12 h-12 text-primary mx-auto" />
                   </motion.div>
                   <p className="text-foreground font-semibold">
-                    Washington DC Metro Area<br />Maryland & Virginia
+                    Washington DC Metro Area
+                    <br />
+                    Maryland & Virginia
                   </p>
                 </div>
               </div>
             </motion.div>
           </AnimatedSection>
         </div>
-
-        {/* CTA Section */}
-        <motion.div
-          className="mt-16 text-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-        >
-          <p className="text-muted-foreground mb-6">
-            Ready to book your ride?
-          </p>
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link
-              href="/book-now"
-              className="inline-flex px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold uppercase tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-primary/50"
-            >
-              Book Online Now
-            </Link>
-          </motion.div>
-        </motion.div>
       </div>
     </section>
-  )
+  );
 }

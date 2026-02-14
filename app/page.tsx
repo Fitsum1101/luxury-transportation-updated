@@ -14,6 +14,7 @@ import ChatBot from "@/components/sections/chatbot/ChatBot";
 import { TrustedClients } from "@/components/sections/TrustedClients";
 import { Experience } from "@/components/sections/Experience";
 import { SafetyConvenience } from "@/components/sections/SafetyConvenience";
+import { CTA } from "@/components/sections/CTA";
 
 export default function Home() {
   const {
@@ -61,7 +62,7 @@ export default function Home() {
         email={contact.email}
         address={contact.address}
       />
-
+      <CTA />
       {/* Footer */}
       <TrustedClients />
       <Footer />

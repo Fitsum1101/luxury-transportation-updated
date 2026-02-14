@@ -1,28 +1,25 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import { StaggerContainer, StaggerItem } from '../animated-section'
-import { ArrowRight } from 'lucide-react'
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { StaggerContainer, StaggerItem } from "../animated-section";
+import { ArrowRight } from "lucide-react";
 
 interface Service {
-  name: string
-  description: string
+  name: string;
+  description: string;
   cta: {
-    text: string
-    link: string
-  }
+    text: string;
+    link: string;
+  };
 }
 
 interface ServicesSectionProps {
-  title: string
-  servicesList: Service[]
+  title: string;
+  servicesList: Service[];
 }
 
-export function ServicesSection({
-  title,
-  servicesList,
-}: ServicesSectionProps) {
+export function ServicesSection({ title, servicesList }: ServicesSectionProps) {
   return (
     <section className="relative py-24 md:py-32 px-6 md:px-12 overflow-hidden">
       {/* Background accent elements */}
@@ -33,7 +30,7 @@ export function ServicesSection({
           transition={{ duration: 6, repeat: Infinity }}
         />
       </div>
-      
+
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
@@ -45,7 +42,11 @@ export function ServicesSection({
         >
           <h2 className="premium-subheading mb-4">{title}</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive transportation solutions tailored to your needs
+            At Trust Luxury Transportation, we deliver a refined and reliable
+            travel experience through a wide range of professional black car and
+            chauffeur services. Serving Washington D.C., Northern Virginia, and
+            Maryland, we offer transportation solutions designed for comfort,
+            punctuality, and class.
           </p>
         </motion.div>
 
@@ -88,5 +89,5 @@ export function ServicesSection({
         </StaggerContainer>
       </div>
     </section>
-  )
+  );
 }

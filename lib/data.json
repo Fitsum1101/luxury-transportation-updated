@@ -34,14 +34,14 @@
   "pages": {
     "home": {
       "hero": {
-        "headline": "Only The Finest Luxury Transport",
+        "headline": "TRUST LUXURY TRANSPORTATION",
         "subheadline": "In Washington DC, Maryland and Virginia",
         "primaryCta": {
           "text": "BOOK ONLINE",
           "link": "/book-now"
         },
         "secondaryCta": {
-          "text": "CALL US",
+          "text": "+1 (703) 868-1811",
           "link": "tel:+17038681811"
         },
         "backgroundVideo": "PLACEHOLDER_HERO_VIDEO_URL",
@@ -92,7 +92,7 @@
       ]
     },
     "services": {
-      "title": "Our Transportation Services",
+      "title": "Our Services",
       "servicesList": [
         {
           "name": "Airport Transfers",

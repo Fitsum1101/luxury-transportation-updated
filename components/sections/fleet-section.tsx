@@ -36,10 +36,15 @@ export function FleetSection({ fleet }: FleetSectionProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="premium-subheading mb-4">Our Fleet</h2>
+          <h2 className="premium-subheading mb-4"> Top-Class Fleet</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Newest luxury vehicles, meticulously maintained and immaculately
-            clean
+            Discover the perfect ride for any occasion with Trust Luxury
+            Transportation’s premium fleet. From sleek luxury sedans to spacious
+            executive SUVs, each vehicle is meticulously maintained and equipped
+            with advanced safety features and top-tier amenities. Whether you’re
+            heading to a business meeting, airport, special event, or private
+            engagement, our fleet offers comfort, style, and reliability—all in
+            one.
           </p>
         </motion.div>
 

@@ -60,10 +60,6 @@ export function TrustedClients() {
           <h2 className="font-serif text-4xl sm:text-5xl font-bold mb-4 text-white">
             Our Trusted Clients
           </h2>
-          <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
-            Proudly serving distinguished clients across the Washington DC Metro
-            Area
-          </p>
           <div
             className="w-16 h-0.5 mx-auto mt-6"
             style={{ backgroundColor: "#CBB26A" }}

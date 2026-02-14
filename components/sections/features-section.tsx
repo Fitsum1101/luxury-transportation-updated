@@ -35,9 +35,9 @@ export function FeaturesSection({ features }: FeaturesGridProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="premium-subheading mb-4">Why Choose Us</h2>
+          <h2 className="premium-subheading mb-4"> Always The Finest</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Discover what sets Trust Luxury Transportation apart
+            OUR FIVE STAR SERVICE PROMISE IS SIMPLE
           </p>
         </motion.div>
 
