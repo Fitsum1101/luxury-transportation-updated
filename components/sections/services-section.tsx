@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { StaggerContainer, StaggerItem } from "../animated-section";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 interface Service {
   name: string;
@@ -59,6 +60,18 @@ export function ServicesSection({ title, servicesList }: ServicesSectionProps) {
                   className="glass-card p-8 flex flex-col h-full group hover:border-primary/50 transition-all duration-300"
                   whileHover={{ y: -8 }}
                 >
+                  {/* Image */}
+                  <div className="relative w-full aspect-[16/9] mb-6 overflow-hidden rounded-lg">
+                    <Image
+                      src="/chauffeur.jpg" // make sure this exists in your service object
+                      alt={service.name}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      priority={idx === 0}
+                    />
+                  </div>
+
                   {/* Service Name */}
                   <h3 className="font-serif font-semibold text-lg mb-3 group-hover:text-primary transition-colors duration-300">
                     {service.name}
