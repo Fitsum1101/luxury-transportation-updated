@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { StaggerContainer, StaggerItem } from '../animated-section'
-import { Sparkles } from 'lucide-react'
+import { motion } from "framer-motion";
+import { StaggerContainer, StaggerItem } from "../animated-section";
+import { Sparkles } from "lucide-react";
 
 interface Feature {
-  title: string
-  description: string
-  iconImage?: string
+  title: string;
+  description: string;
+  iconImage?: string;
 }
 
 interface FeaturesGridProps {
-  features: Feature[]
+  features: Feature[];
 }
 
 export function FeaturesSection({ features }: FeaturesGridProps) {
@@ -79,5 +79,5 @@ export function FeaturesSection({ features }: FeaturesGridProps) {
         </StaggerContainer>
       </div>
     </section>
-  )
+  );
 }
