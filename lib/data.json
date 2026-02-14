@@ -1,0 +1,293 @@
+{
+  "global": {
+    "siteTitle": "Trust Luxury Transportation",
+    "baseUrl": "https://trustluxurytransportation.com",
+    "logoUrl": "PLACEHOLDER_LOGO_URL",
+    "heroBgVideo": "PLACEHOLDER_HERO_VIDEO_URL"
+  },
+  "navigation": [
+    {
+      "name": "Home",
+      "link": "/"
+    },
+    {
+      "name": "Book Now",
+      "link": "/book-now"
+    },
+    {
+      "name": "About Us",
+      "link": "/about-us"
+    },
+    {
+      "name": "Fleet",
+      "link": "/#fleet"
+    },
+    {
+      "name": "Services",
+      "link": "/services"
+    },
+    {
+      "name": "Contact",
+      "link": "/contact"
+    }
+  ],
+  "pages": {
+    "home": {
+      "hero": {
+        "headline": "Only The Finest Luxury Transport",
+        "subheadline": "In Washington DC, Maryland and Virginia",
+        "primaryCta": {
+          "text": "BOOK ONLINE",
+          "link": "/book-now"
+        },
+        "secondaryCta": {
+          "text": "CALL US",
+          "link": "tel:+17038681811"
+        },
+        "backgroundVideo": "PLACEHOLDER_HERO_VIDEO_URL",
+        "backgroundImage": "PLACEHOLDER_HERO_IMAGE_URL"
+      },
+      "intro": {
+        "text": "All of our chauffeurs are professionally trained. Our fleet is updated with newer model premium luxury vehicles. Our office team is full of knowledgeable and experienced service and support people. Efficient and effortless customer booking experience for those on the go.",
+        "cta": {
+          "text": "LEARN MORE",
+          "link": "/about-us"
+        }
+      },
+      "features": [
+        {
+          "title": "Professionally Trained",
+          "description": "All of our chauffeurs are professionally trained. We guarantee that your professional chauffeur is of the highest quality for both safety and hospitality. 24/7 Luxury Transportation Services Across Tysons & Beyond.",
+          "iconImage": "PLACEHOLDER_FEATURE_ICON"
+        },
+        {
+          "title": "Newest Vehicle Models",
+          "description": "Our fleet is updated with newer model premium luxury vehicles. Each vehicle is meticulously maintained and immaculately cleaned. Insurance across the entire executive fleet ensures utmost safety.",
+          "iconImage": "PLACEHOLDER_FEATURE_ICON"
+        },
+        {
+          "title": "Premium Support",
+          "description": "Knowledgeable service & support team for concierge transportation experiences.",
+          "iconImage": "PLACEHOLDER_FEATURE_ICON"
+        },
+        {
+          "title": "Washington DC Metro Area",
+          "description": "Reliable chauffeur service across Washington DC, Maryland, and Virginia.",
+          "iconImage": "PLACEHOLDER_FEATURE_ICON"
+        }
+      ]
+    },
+    "aboutUs": {
+      "title": "About Us",
+      "text": "Trust Luxury Transportation is a premier provider of high-end transportation services, dedicated to safety, comfort, and personalized client experiences. Since 2014, we have served the Washington D.C. metro area and beyond with sophisticated travel solutions for both business and leisure.",
+      "stats": {
+        "yearsOfExperience": "10+",
+        "satisfiedClients": "Thousands"
+      },
+      "values": [
+        "Professional chauffeurs trained and safety-certified.",
+        "Newest luxury vehicles with advanced amenities.",
+        "Experienced support staff available for every step of your journey.",
+        "Intuitive booking and customer first approach."
+      ]
+    },
+    "services": {
+      "title": "Our Transportation Services",
+      "servicesList": [
+        {
+          "name": "Airport Transfers",
+          "description": "Stress-free pickups and drop-offs to all major airports including DCA, IAD, and BWI. Flight-tracking ensures on-time service.",
+          "cta": {
+            "text": "BOOK NOW",
+            "link": "/book-now"
+          }
+        },
+        {
+          "name": "Point-to-Point Transfers",
+          "description": "Reliable point-to-point luxury transfers for business or personal travel.",
+          "cta": {
+            "text": "BOOK NOW",
+            "link": "/book-now"
+          }
+        },
+        {
+          "name": "Corporate Transportation",
+          "description": "Premium travel services for executives and professionals who demand punctuality and discretion.",
+          "cta": {
+            "text": "BOOK NOW",
+            "link": "/book-now"
+          }
+        },
+        {
+          "name": "Hotel & Resort Transfers",
+          "description": "Elegant transportation to and from top hotels and resorts in the area.",
+          "cta": {
+            "text": "BOOK NOW",
+            "link": "/book-now"
+          }
+        },
+        {
+          "name": "Special Occasions",
+          "description": "Luxury transportation for weddings, proms, birthdays, and galas.",
+          "cta": {
+            "text": "BOOK NOW",
+            "link": "/book-now"
+          }
+        },
+        {
+          "name": "Group Transportation",
+          "description": "Coordinated transportation solutions for groups with professional chauffeurs.",
+          "cta": {
+            "text": "BOOK NOW",
+            "link": "/book-now"
+          }
+        },
+        {
+          "name": "Diplomatic Delegation Services",
+          "description": "Transportation service tailored for diplomats and international delegations.",
+          "cta": {
+            "text": "BOOK NOW",
+            "link": "/book-now"
+          }
+        },
+        {
+          "name": "Private Aviation Transfers",
+          "description": "VIP ground transportation coordinated directly with private air terminals.",
+          "cta": {
+            "text": "BOOK NOW",
+            "link": "/book-now"
+          }
+        }
+      ]
+    },
+    "fleet": [
+      {
+        "type": "Sprinter Van",
+        "capacity": "10-15 Passengers",
+        "luggage": "15 Suitcases",
+        "imageUrl": "/fleet-van.jpg"
+      },
+      {
+        "type": "SUV Executive",
+        "capacity": "6 Passengers",
+        "luggage": "6 Suitcases",
+        "imageUrl": "/fleet-suv.jpg"
+      },
+      {
+        "type": "Luxury Sedan",
+        "capacity": "2-3 Passengers",
+        "luggage": "4 Suitcases",
+        "imageUrl": "/fleet-sedan.jpg"
+      },
+      {
+        "type": "Stretch Limo",
+        "capacity": "6-10 Passengers",
+        "luggage": "10 Suitcases",
+        "imageUrl": "/fleet-limo.jpg"
+      },
+      {
+        "type": "Mini Bus",
+        "capacity": "20-30 Passengers",
+        "luggage": "30 Suitcases",
+        "imageUrl": "/fleet-minibus.jpg"
+      },
+      {
+        "type": "Motor Coach",
+        "capacity": "40-56 Passengers",
+        "luggage": "56 Suitcases",
+        "imageUrl": "/fleet-motorcoach.jpg"
+      }
+    ],
+    "booking": {
+      "bookNow": {
+        "title": "Book Your Ride Now",
+        "formSteps": ["Journey Information", "Vehicle Selection", "Payment"],
+        "cta": {
+          "text": "BOOK ONLINE",
+          "link": "/book-now"
+        }
+      },
+      "hourlyBook": {
+        "title": "Hourly Booking",
+        "formFields": ["Ride Date/Time", "Pickup Location", "Fleet Selection"],
+        "cta": {
+          "text": "NEXT",
+          "link": "/hourly-book"
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "phone": "+1 (703) 868-1811",
+      "email": "contact@trustluxurytransportation.com",
+      "address": "7918 Jones Branch Dr, McLean, Virginia 22102, US",
+      "mapEmbed": "PLACEHOLDER_MAP_EMBED_URL"
+    },
+    "footer": {
+      "logoUrl": "PLACEHOLDER_LOGO_URL",
+      "sections": [
+        {
+          "title": "Quick Links",
+          "links": [
+            {
+              "text": "Home",
+              "link": "/"
+            },
+            {
+              "text": "About Us",
+              "link": "/about-us"
+            },
+            {
+              "text": "Services",
+              "link": "/services"
+            },
+            {
+              "text": "Fleet",
+              "link": "/#fleet"
+            },
+            {
+              "text": "Book Now",
+              "link": "/book-now"
+            },
+            {
+              "text": "Contact",
+              "link": "/contact"
+            }
+          ]
+        },
+        {
+          "title": "Contact Info",
+          "address": "7918 Jones Branch Dr, McLean, Virginia 22102, US",
+          "phone": "+1 (703) 868-1811",
+          "email": "contact@trustluxurytransportation.com"
+        },
+        {
+          "title": "Social Media",
+          "links": [
+            {
+              "platform": "Facebook",
+              "link": "PLACEHOLDER_FACEBOOK"
+            },
+            {
+              "platform": "Instagram",
+              "link": "PLACEHOLDER_INSTAGRAM"
+            },
+            {
+              "platform": "Twitter/X",
+              "link": "PLACEHOLDER_TWITTER"
+            },
+            {
+              "platform": "LinkedIn",
+              "link": "PLACEHOLDER_LINKEDIN"
+            },
+            {
+              "platform": "YouTube",
+              "link": "PLACEHOLDER_YOUTUBE"
+            }
+          ]
+        }
+      ],
+      "copyright": "© 2026 Trust Luxury Transportation. All Rights Reserved."
+    }
+  }
+}
