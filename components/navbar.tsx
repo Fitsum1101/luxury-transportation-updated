@@ -1,45 +1,46 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import Image from 'next/image'
-import { useTheme } from 'next-themes'
-import { Menu, X, Moon, Sun } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import { useTheme } from "next-themes";
+import { Menu, X, Moon, Sun } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Book Now', href: '/book-now' },
-  { name: 'About Us', href: '/about-us' },
-  { name: 'Services', href: '/services' },
-  { name: 'Contact', href: '/contact' },
-]
+  { name: "Home", href: "/" },
+  { name: "Book Now", href: "/book-now" },
+  { name: "About Us", href: "/about-us" },
+  { name: "Services", href: "/services" },
+  { name: "Fleet", href: "/fleet" },
+  { name: "Contact", href: "/contact" },
+];
 
 export function Navbar() {
-  const { theme, setTheme } = useTheme()
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme();
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
+    setMounted(true);
 
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
+      setScrolled(window.scrollY > 20);
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  if (!mounted) return null
+  if (!mounted) return null;
 
   return (
     <>
       {/* Floating Navbar */}
       <motion.nav
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          scrolled ? 'top-4' : 'top-0'
+          scrolled ? "top-4" : "top-0"
         }`}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -47,15 +48,18 @@ export function Navbar() {
       >
         <div
           className={`${
-            scrolled ? 'mx-6 md:mx-12 rounded-xl' : 'mx-0'
+            scrolled ? "mx-6 md:mx-12 rounded-xl" : "mx-0"
           } glass-card px-6 md:px-12 py-4 transition-all duration-300`}
         >
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <Image 
-                src="/logo.png" 
-                alt="Trust Luxury Transportation" 
+            <Link
+              href="/"
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            >
+              <Image
+                src="/logo.png"
+                alt="Trust Luxury Transportation"
                 width={120}
                 height={40}
                 className="h-10 w-auto"
@@ -83,12 +87,12 @@ export function Navbar() {
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                   className="p-2 hover:bg-secondary rounded-lg transition-colors duration-200"
                   aria-label="Toggle theme"
                   type="button"
                 >
-                  {theme === 'dark' ? (
+                  {theme === "dark" ? (
                     <Sun className="w-5 h-5 text-primary" />
                   ) : (
                     <Moon className="w-5 h-5 text-primary" />
@@ -116,7 +120,7 @@ export function Navbar() {
           {/* Mobile Menu */}
           <motion.div
             initial={false}
-            animate={{ height: isOpen ? 'auto' : 0 }}
+            animate={{ height: isOpen ? "auto" : 0 }}
             transition={{ duration: 0.3 }}
             className="overflow-hidden md:hidden"
           >
@@ -139,5 +143,5 @@ export function Navbar() {
       {/* Spacer */}
       <div className="h-24" />
     </>
-  )
+  );
 }
